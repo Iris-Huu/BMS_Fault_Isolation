@@ -1,0 +1,32 @@
+﻿# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local secrets and environment variables
+.env
+.env.*
+
+# Logs
+*.log
+
+# Raw and processed experimental data (暂不上传)
+data/raw/
+data/processed/
+
+# MATLAB data files
+*.mat
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
