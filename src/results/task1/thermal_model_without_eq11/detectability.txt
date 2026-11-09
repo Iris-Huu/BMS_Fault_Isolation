@@ -1,5 +1,0 @@
-Detectable faults:
-['f_i', 'f_v', 'f_isc', 'f_Q', 'f_R']
-
-Non-detectable faults:
-['f_T']
