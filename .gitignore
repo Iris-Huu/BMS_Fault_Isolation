@@ -19,7 +19,7 @@ __pycache__/
 # Logs
 *.log
 
-# Raw and processed experimental data (暂不上传)
+# Raw and processed experimental data
 data/raw/
 data/processed/
 
@@ -30,3 +30,9 @@ data/processed/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# IDE settings
+.vscode/
+
+# Temporary files
+*.bak
