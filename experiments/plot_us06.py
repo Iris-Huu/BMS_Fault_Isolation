@@ -28,7 +28,7 @@ DATA_PATH = (
     / "03-20-17_01.43 25degC_US06_Pan18650PF.mat"
 )
 
-FIGURE_DIR = PROJECT_ROOT / "results" / "figures"
+FIGURE_DIR = PROJECT_ROOT / "results" / "week1" / "figures"
 FIGURE_DIR.mkdir(parents=True, exist_ok=True)
 
 

@@ -3,7 +3,7 @@ from pathlib import Path
 from scipy.io import whosmat
 
 # 获取项目根目录
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 # LG 18650HG2 25°C US06 数据文件
 file_path = (

@@ -1,0 +1,11 @@
+{
+  "reference_capacity_ah": 2.9,
+  "equations": [
+    "q_removed(t) = integral Icell dt / 3600",
+    "soc_reference = 1-q_removed/2.9",
+    "change Qref to Qnew => soc_new=1-(Qref/Qnew)*(1-soc_reference); transform every OCV/parameter SOC knot identically"
+  ],
+  "conclusion": "Healthy predictions depend on withdrawn charge and curve coordinates, not the arbitrary reference-capacity label, when transformed consistently.",
+  "physical_capacity_status": "Incomplete low-temperature discharges cannot identify date-specific equilibrium capacity; usable 1C capacities are separate audited observations.",
+  "counterfactual_capacity_fault": "A true capacity-change fault changes charge dynamics relative to fixed calibrated curves; it is not a coordinate relabeling."
+}

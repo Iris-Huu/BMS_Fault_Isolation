@@ -1,0 +1,103 @@
+{
+  "parameters": {
+    "Q_Ah": 2.9,
+    "Cth_J_K": 58.253013901373514,
+    "hA_W_K": 0.12726799843811343,
+    "R0_ohm": 0.05627790075571888,
+    "R1_ohm": 0.006094846230058248,
+    "R2_ohm": 0.05955784910759337,
+    "C1_F": 126.8335296137948,
+    "C2_F": 719.4797588134255,
+    "resistance_soc_model": {
+      "reference_temperature_c": 0.0,
+      "soc_knots": [
+        0.0,
+        0.2,
+        0.4,
+        0.6000000000000001,
+        0.8,
+        1.0
+      ],
+      "R0_ohm": [
+        0.26962770898471994,
+        0.04845882719713024,
+        0.05618077376866265,
+        0.05637502774277511,
+        0.04880768448385538,
+        0.07374277418161405
+      ],
+      "R1_ohm": [
+        0.15291339211253074,
+        0.08971296754170487,
+        0.005756496266195259,
+        0.006433196193921237,
+        0.013839260397277757,
+        0.018341070247855633
+      ],
+      "R2_ohm": [
+        0.10980077628319015,
+        0.10266470350160524,
+        0.06863358106079759,
+        0.05048211715438914,
+        0.06252969695594657,
+        0.07644032082563605
+      ],
+      "ocv_correction_v": [
+        -0.001207191049084912,
+        -0.006915278315114516,
+        -0.010935013173954263,
+        -0.013564901269791034,
+        -0.0171142632049261,
+        -0.00704999414392103
+      ],
+      "R0_activation_k": 2534.1531589396823,
+      "R1_activation_k": 2506.2465493156824,
+      "R2_activation_k": 2252.281289470088,
+      "tau1_s": 0.7730308598116183,
+      "tau2_s": 42.850666911377665
+    },
+    "voltage_readout_blend": 0.75,
+    "effective_ambient_offset_c": 0.3314937550288355
+  },
+  "temperature_c": 0,
+  "thermal_calibration": {
+    "Cth_J_K": 58.253013901373514,
+    "hA_W_K": 0.12726799843811343,
+    "effective_ambient_offset_c": 0.3314937550288355,
+    "offset_prior_c": 0.5508556,
+    "calibration_rmse_c": 0.27874428814646957,
+    "sensitivity_profiles": [
+      {
+        "effective_ambient_offset_c": -0.1685062449711645,
+        "Cth_J_K": 57.15691664837559,
+        "hA_W_K": 0.10826027857572505
+      },
+      {
+        "effective_ambient_offset_c": 0.3314937550288355,
+        "Cth_J_K": 58.25301666668396,
+        "hA_W_K": 0.12726799767703043
+      },
+      {
+        "effective_ambient_offset_c": 0.8314937550288355,
+        "Cth_J_K": 60.82651253934912,
+        "hA_W_K": 0.15284019472683535
+      }
+    ],
+    "interpretation": "joint effective ambient/thermometry offset, not an independent sensor-bias measurement"
+  },
+  "capacity_coordinate": "reference=2.9Ah; OCV is a function of withdrawn Ah, physical capacity is not inferred",
+  "current_voltage_response": "causal one-sample physical-voltage blend fitted using Cycle1, selected using Cycle2",
+  "observation_parameter_is_not_a_proven_hardware_delay": true,
+  "source_ocv": "parameters/ocv_0C.csv",
+  "status": "development_validation_with_explicit_uncertainty",
+  "calibration_rows_excluded_below_ocv_support": [
+    16287,
+    11303
+  ],
+  "calibration_ocv_soc_lower_limit": 0.15360344827586203,
+  "scalar_fallback_basis": {
+    "soc_reference": 0.5,
+    "cell_temperature_c": 0,
+    "note": "Use resistance_soc_model for full simulation; scalar values alone are an approximation"
+  }
+}

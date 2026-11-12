@@ -1,0 +1,21 @@
+{
+  "preferred_numerical_model": "calibration_refinement",
+  "status": "conditional_development_model",
+  "parameter_files": {
+    "25C": "comparisons/calibration_refinement/25C/parameters.json",
+    "10C": "comparisons/calibration_refinement/10C/parameters.json",
+    "0C": "comparisons/calibration_refinement/0C/parameters.json"
+  },
+  "base_ocv_files": {
+    "25C": "parameters/ocv_25C.csv",
+    "10C": "parameters/ocv_10C.csv",
+    "0C": "parameters/ocv_0C.csv"
+  },
+  "noise_files": {
+    "25C": "noise/25C/empirical_colored_noise.json",
+    "10C": "noise/10C/empirical_colored_noise.json",
+    "0C": "noise/0C/empirical_colored_noise.json"
+  },
+  "comparison_file": "summary/refinement_comparison.csv",
+  "limitations_file": "summary/week2_completion_status.json"
+}

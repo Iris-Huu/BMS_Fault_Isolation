@@ -35,6 +35,7 @@ def load_panasonic_data(
     drop_exact_duplicates=True,
     drop_duplicate_times=True,
     gap_threshold=0.15,
+    ambient_setpoint_c=None,
 ):
     """
     读取 Panasonic 18650PF MATLAB 数据，并进行基础清洗。
@@ -52,6 +53,11 @@ def load_panasonic_data(
 
     gap_threshold : float
         判断较大采样间隔的阈值，单位为秒。
+
+    ambient_setpoint_c : float or None
+        仅对已确认温箱受控的实验显式使用：用设定温度补齐缺失的温箱温度。
+        默认不补齐，原始 MAT 文件不改动；质量报告保留原始无效值数量。
+        Trise 实验禁止使用此选项。
 
     Returns
     -------
@@ -153,6 +159,18 @@ def load_panasonic_data(
         invalid_counts[col] = int(
             (~np.isfinite(df[col].to_numpy())).sum()
         )
+
+    original_invalid_counts = invalid_counts.copy()
+    ambient_imputed = 0
+    if ambient_setpoint_c is not None:
+        if not np.isfinite(ambient_setpoint_c):
+            raise ValueError("ambient_setpoint_c 必须为有限数值")
+        if "trise" in str(file_path).lower():
+            raise ValueError("Trise 实验必须使用实测温箱温度，不允许设定值补齐")
+        missing_ambient = ~np.isfinite(df["Chamber_Temp_degC"])
+        ambient_imputed = int(missing_ambient.sum())
+        df.loc[missing_ambient, "Chamber_Temp_degC"] = float(ambient_setpoint_c)
+        invalid_counts["Chamber_Temp_degC"] = 0
 
     if any(invalid_counts.values()):
 
@@ -301,6 +319,11 @@ def load_panasonic_data(
         ),
 
         "invalid_values": invalid_counts,
+
+        "original_invalid_values": original_invalid_counts,
+        "ambient_imputed_rows": ambient_imputed,
+        "ambient_setpoint_c": ambient_setpoint_c,
+        "ambient_source": "setpoint_fallback" if ambient_imputed else "measured",
 
         "min_sampling_interval_s": min_dt,
 

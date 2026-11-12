@@ -1,0 +1,63 @@
+{
+  "schemas": [
+    {
+      "cell": "LG_18650HG2",
+      "fields": [
+        "Ah",
+        "Battery_Temp_degC",
+        "Current",
+        "Power",
+        "Time",
+        "TimeStamp",
+        "Voltage",
+        "Wh"
+      ],
+      "top_variables": [
+        "meas"
+      ],
+      "files": 206
+    },
+    {
+      "cell": "Panasonic_18650PF",
+      "fields": [
+        "Ah",
+        "Battery_Temp_degC",
+        "Chamber_Temp_degC",
+        "Current",
+        "Power",
+        "Time",
+        "TimeStamp",
+        "Voltage",
+        "Wh"
+      ],
+      "top_variables": [
+        "meas"
+      ],
+      "files": 198
+    }
+  ],
+  "archives": [
+    {
+      "file": "data\\raw\\LG_18650HG2\\LG_HG2_Prepared_Dataset_McMasterUniversity_Jan_2020\\LGHG2@n10C_to_25degC.zip",
+      "members": 17,
+      "matching_members": [],
+      "examples": [
+        "Other_Files/",
+        "Test/",
+        "Train/",
+        "Validation/",
+        "Other_Files/LGHG2_Min_Max_25degC_to_n10degC.mat",
+        "Other_Files/TRAIN_LGHG2@0degC_Norm_5Inputs.mat",
+        "Other_Files/TRAIN_LGHG2@10degC_Norm_5Inputs.mat",
+        "Other_Files/TRAIN_LGHG2@25degC_Norm_5Inputs.mat",
+        "Other_Files/TRAIN_LGHG2@n10degC_Norm_5Inputs.mat",
+        "Other_Files/TRAIN_LGHG2@n10degC_to_25degC_Norm_5Inputs_OneCharge.mat",
+        "Other_Files/TRAIN_LGHG2@n10degC_to_25degC_Norm_5Inputs_TwoCharges.mat",
+        "Test/01_TEST_LGHG2@n10degC_Norm_(05_Inputs).mat",
+        "Test/02_TEST_LGHG2@0degC_Norm_(05_Inputs).mat",
+        "Test/03_TEST_LGHG2@10degC_Norm_(05_Inputs).mat",
+        "Test/04_TEST_LGHG2@25degC_Norm_(05_Inputs).mat"
+      ]
+    }
+  ]
+}

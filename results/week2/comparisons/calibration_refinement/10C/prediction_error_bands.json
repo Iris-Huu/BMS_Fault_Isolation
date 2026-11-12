@@ -1,0 +1,38 @@
+{
+  "source": "Cycle3 only",
+  "soc_bins": [
+    0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "pointwise_absolute_error_95_quantiles": [
+    [
+      0.19189661318773754,
+      1.5831875014190684
+    ],
+    [
+      0.024637491547860765,
+      0.30350095359145646
+    ],
+    [
+      0.02119238496946236,
+      0.277413507039749
+    ],
+    [
+      0.011325404367035618,
+      0.27835569160722035
+    ],
+    [
+      0.02269066388300976,
+      0.4143638191812367
+    ]
+  ],
+  "units": [
+    "V",
+    "C"
+  ],
+  "limitations": "Empirical bands under changing operating conditions; serial dependence prevents an iid coverage guarantee."
+}

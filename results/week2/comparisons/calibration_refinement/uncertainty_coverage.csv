@@ -1,0 +1,10 @@
+temperature_c,cycle,band_source,voltage_coverage,temperature_coverage,median_voltage_halfwidth_mv,median_temperature_halfwidth_c
+25,Cycle_4,Cycle3 95% residual quantiles + calibrated ambient-offset profiles,0.7969005973755192,0.9748307987622247,17.623745392133515,0.6042133879881568
+25,US06,Cycle3 95% residual quantiles + calibrated ambient-offset profiles,0.732334581772784,0.9993341656263005,17.57377582265507,1.1016789621677692
+25,UDDS,Cycle3 95% residual quantiles + calibrated ambient-offset profiles,0.9920066373457754,1.0,17.281868183190106,0.8032352227864017
+10,Cycle_4,Cycle3 95% residual quantiles + calibrated ambient-offset profiles,0.9512557331339785,0.9675004546097428,22.744806119813667,0.5701447529494823
+10,US06,Cycle3 95% residual quantiles + calibrated ambient-offset profiles,0.7791904761904762,0.999,23.56847895380576,0.9354890583930549
+10,UDDS,Cycle3 95% residual quantiles + calibrated ambient-offset profiles,0.9707931047590087,0.9889339744564392,22.821009631069366,0.6548432513136744
+0,Cycle_4,Cycle3 95% residual quantiles + calibrated ambient-offset profiles,0.895666506599525,0.9860871370910176,63.3254220420465,0.769379058876912
+0,US06,Cycle3 95% residual quantiles + calibrated ambient-offset profiles,0.8651688460593486,0.9499331167590293,41.603652825548565,1.1791714404929756
+0,UDDS,Cycle3 95% residual quantiles + calibrated ambient-offset profiles,0.9660833638082492,0.9989651496642572,21.859514024155537,1.01785978844254
