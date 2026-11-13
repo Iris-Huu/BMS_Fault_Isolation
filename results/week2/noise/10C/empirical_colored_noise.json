@@ -1,0 +1,99 @@
+{
+  "channel_order": [
+    "current_A",
+    "voltage_V",
+    "temperature_C"
+  ],
+  "native_cadence_s": 1.0000021196901798,
+  "training_blocks": 36,
+  "test_blocks": 12,
+  "lag1": [
+    null,
+    0.11527135931589418,
+    0.13894272961174373
+  ],
+  "common_lag1_surrogate": 0.13894272961174373,
+  "empirical_covariance": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      9.235751978756105e-09,
+      -6.247347172241426e-08
+    ],
+    [
+      0.0,
+      -6.247347172241426e-08,
+      0.004691936946321494
+    ]
+  ],
+  "gaussian_surrogate_covariance": [
+    [
+      1.5154560685861165e-07,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      9.236751978756105e-09,
+      -6.247347172241426e-08
+    ],
+    [
+      0.0,
+      -6.247347172241426e-08,
+      0.0046919369473214945
+    ]
+  ],
+  "temperature_large_jump_bin_sensitivity_c": 0.20847499999999997,
+  "temperature_min_observed_spacing_c": 0.01157333333333277,
+  "current_plateau_fluctuation_std_proxy_a": 0.0003892873063158002,
+  "current_sensor_noise_identified": false,
+  "point_and_block_coverage": [
+    {
+      "channel": "voltage_V",
+      "nominal_fraction": 0.9,
+      "point_halfwidth": 0.00012266189325424998,
+      "held_out_point_coverage": 0.7352737352737353,
+      "block_halfwidth": 0.0006200485297371827,
+      "held_out_block_coverage": 0.9166666666666666,
+      "held_out_blocks": 12
+    },
+    {
+      "channel": "voltage_V",
+      "nominal_fraction": 0.95,
+      "point_halfwidth": 0.00023288532095886474,
+      "held_out_point_coverage": 0.8731808731808732,
+      "block_halfwidth": 0.0006309593856289597,
+      "held_out_block_coverage": 0.9166666666666666,
+      "held_out_blocks": 12
+    },
+    {
+      "channel": "temperature_C",
+      "nominal_fraction": 0.9,
+      "point_halfwidth": 0.14132235961974224,
+      "held_out_point_coverage": 0.9480249480249481,
+      "block_halfwidth": 0.21839756648182007,
+      "held_out_block_coverage": 0.75,
+      "held_out_blocks": 12
+    },
+    {
+      "channel": "temperature_C",
+      "nominal_fraction": 0.95,
+      "point_halfwidth": 0.16929230319992145,
+      "held_out_point_coverage": 0.9618849618849619,
+      "block_halfwidth": 0.22276255597516892,
+      "held_out_block_coverage": 0.9166666666666666,
+      "held_out_blocks": 12
+    }
+  ],
+  "limitations": [
+    "Per-window linear detrending conditions on local drift.",
+    "Windows are not proven exchangeable; coverage is empirical, not guaranteed.",
+    "Pulse-current fluctuations include controller ripple; current sensor noise is not separately identified.",
+    "Large temperature jump is a sensitivity bin width, not a proven ADC quantizer.",
+    "Sub-native-cadence correlation is extrapolated, not directly measured."
+  ]
+}

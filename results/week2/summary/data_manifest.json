@@ -1,0 +1,302 @@
+[
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\Panasonic 18650PF Data\\25degC\\5 pulse disch\\03-11-17_08.47 25degC_5Pulse_HPPC_Pan18650PF.mat",
+    "role": "electrical_calibration_and_noise",
+    "temperature_c": 25,
+    "sha256": "21f5d94812f5059bc484ce44cccf1485c3b0dc02e36f36d80f9d24173ac1a8e6",
+    "rows": 102647,
+    "ambient_source": "measured",
+    "ambient_imputed_rows": 0,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 0
+    },
+    "max_sampling_interval_s": 3748.5449966043234,
+    "intervals_over_15s": 13,
+    "removed_duplicate_records": 153
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\Panasonic 18650PF Data\\25degC\\Drive cycles\\03-18-17_02.17 25degC_Cycle_1_Pan18650PF.mat",
+    "role": "thermal_calibration",
+    "temperature_c": 25,
+    "sha256": "2926d32c3790062a5b29eeb5fdde7a580ae4d09b7a50b4ee9951ae5a42f24e28",
+    "rows": 109637,
+    "ambient_source": "measured",
+    "ambient_imputed_rows": 0,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 0
+    },
+    "max_sampling_interval_s": 2.348991483449936,
+    "intervals_over_15s": 0,
+    "removed_duplicate_records": 4
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\Panasonic 18650PF Data\\25degC\\Drive cycles\\03-19-17_03.25 25degC_Cycle_2_Pan18650PF.mat",
+    "role": "thermal_calibration",
+    "temperature_c": 25,
+    "sha256": "9e716ba5040ead435bec2c3d382c87db1b8f7580ea262e2d8613bc109e3e67ea",
+    "rows": 111267,
+    "ambient_source": "measured",
+    "ambient_imputed_rows": 0,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 0
+    },
+    "max_sampling_interval_s": 2.2590000182390213,
+    "intervals_over_15s": 0,
+    "removed_duplicate_records": 1
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\Panasonic 18650PF Data\\25degC\\Drive cycles\\03-20-17_01.43 25degC_US06_Pan18650PF.mat",
+    "role": "held_out_validation",
+    "temperature_c": 25,
+    "sha256": "c12a57f8fa2bfcb7fcd30f243781390e1567acb369da647e6bdc08885deb0ac4",
+    "rows": 48060,
+    "ambient_source": "measured",
+    "ambient_imputed_rows": 0,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 0
+    },
+    "max_sampling_interval_s": 2.3409951478242874,
+    "intervals_over_15s": 0,
+    "removed_duplicate_records": 1
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\Panasonic 18650PF Data\\25degC\\Drive cycles\\03-21-17_00.29 25degC_UDDS_Pan18650PF.mat",
+    "role": "held_out_validation",
+    "temperature_c": 25,
+    "sha256": "cb9d830727474c17a8eb624bfd16bbf1f4c306c8d32f831ed58ccdb820f0376a",
+    "rows": 224186,
+    "ambient_source": "measured",
+    "ambient_imputed_rows": 0,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 0
+    },
+    "max_sampling_interval_s": 2.323000878095627,
+    "intervals_over_15s": 0,
+    "removed_duplicate_records": 1
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\10degC\\5 pulse test\\03-27-17_09.06 10degC_5Pulse_HPPC_Pan18650PF.mat",
+    "role": "electrical_calibration_and_noise",
+    "temperature_c": 10,
+    "sha256": "9916ab97e0ea0bac54bed89695e8f638e24302b22633deceee2f77beb5f1e07b",
+    "rows": 91234,
+    "ambient_source": "setpoint_fallback",
+    "ambient_imputed_rows": 91371,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 91371
+    },
+    "max_sampling_interval_s": 3749.8719960451126,
+    "intervals_over_15s": 12,
+    "removed_duplicate_records": 137
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\10degC\\Drive Cycles\\03-28-17_12.51 10degC_Cycle_1_Pan18650PF.mat",
+    "role": "thermal_calibration",
+    "temperature_c": 10,
+    "sha256": "a90db19e0336657d808e8238e705030dd0b68aeaa4f3b5b523c13e95b074bc24",
+    "rows": 93793,
+    "ambient_source": "setpoint_fallback",
+    "ambient_imputed_rows": 93794,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 93794
+    },
+    "max_sampling_interval_s": 2.3650042712688446,
+    "intervals_over_15s": 0,
+    "removed_duplicate_records": 1
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\10degC\\Drive Cycles\\03-28-17_18.18 10degC_Cycle_2_Pan18650PF.mat",
+    "role": "thermal_calibration",
+    "temperature_c": 10,
+    "sha256": "0d256045162ad5be8ee23b11a331d1646bce92562e266b3270aca42397894d33",
+    "rows": 81095,
+    "ambient_source": "setpoint_fallback",
+    "ambient_imputed_rows": 81096,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 81096
+    },
+    "max_sampling_interval_s": 2.112993970513344,
+    "intervals_over_15s": 0,
+    "removed_duplicate_records": 1
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\10degC\\Drive Cycles\\03-27-17_09.06 10degC_US06_Pan18650PF.mat",
+    "role": "held_out_validation",
+    "temperature_c": 10,
+    "sha256": "7020ba0944112eb635430ceaddbe287576d06f55ee56840ac3c30feec65af7cd",
+    "rows": 42000,
+    "ambient_source": "setpoint_fallback",
+    "ambient_imputed_rows": 42000,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 42000
+    },
+    "max_sampling_interval_s": 2.0990028977394104,
+    "intervals_over_15s": 0,
+    "removed_duplicate_records": 0
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\10degC\\Drive Cycles\\03-27-17_09.06 10degC_UDDS_Pan18650PF.mat",
+    "role": "held_out_validation",
+    "temperature_c": 10,
+    "sha256": "971ac1c69feeb81e1f469b6385044660df13cc200f78d204d26ef0f70a7f35bb",
+    "rows": 210464,
+    "ambient_source": "setpoint_fallback",
+    "ambient_imputed_rows": 210465,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 210465
+    },
+    "max_sampling_interval_s": 60.009994357824326,
+    "intervals_over_15s": 59,
+    "removed_duplicate_records": 1
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\0degC\\5 pulse\\05-20-17_10.44 0degC_5pulse_HPPC_Pan18650PF.mat",
+    "role": "electrical_calibration_and_noise",
+    "temperature_c": 0,
+    "sha256": "c887b5837935a101802c4f99ff7a6a594d630dcc92ffcdcf0a15319793c9fe39",
+    "rows": 85134,
+    "ambient_source": "setpoint_fallback",
+    "ambient_imputed_rows": 85260,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 85260
+    },
+    "max_sampling_interval_s": 3750.181006640196,
+    "intervals_over_15s": 11,
+    "removed_duplicate_records": 126
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\0degC\\Drive cycles\\05-30-17_12.56 0degC_Cycle_1_Pan18650PF.mat",
+    "role": "thermal_calibration",
+    "temperature_c": 0,
+    "sha256": "b40c5d6cb7ee52b22e140f7b9fa22fd1ca03fe6c998edaa4ad54cad1786efaa1",
+    "rows": 88006,
+    "ambient_source": "setpoint_fallback",
+    "ambient_imputed_rows": 88007,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 88007
+    },
+    "max_sampling_interval_s": 2.2619973868131638,
+    "intervals_over_15s": 0,
+    "removed_duplicate_records": 1
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\0degC\\Drive cycles\\05-30-17_20.16 0degC_Cycle_2_Pan18650PF.mat",
+    "role": "thermal_calibration",
+    "temperature_c": 0,
+    "sha256": "c3329eae2d18622cfc2a0aeb3b4c64bd6e426ad782166b4e6e452d7fd0d4c3e5",
+    "rows": 83731,
+    "ambient_source": "setpoint_fallback",
+    "ambient_imputed_rows": 83732,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 83732
+    },
+    "max_sampling_interval_s": 2.249997854232788,
+    "intervals_over_15s": 0,
+    "removed_duplicate_records": 1
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\0degC\\Drive cycles\\06-02-17_04.58 0degC_US06_Pan18650PF.mat",
+    "role": "held_out_validation",
+    "temperature_c": 0,
+    "sha256": "03707d28515c2d83ebcf9f29d52246c76706384b6846fd6a1adade88b624038e",
+    "rows": 36631,
+    "ambient_source": "setpoint_fallback",
+    "ambient_imputed_rows": 36632,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 36632
+    },
+    "max_sampling_interval_s": 2.153991535305977,
+    "intervals_over_15s": 0,
+    "removed_duplicate_records": 1
+  },
+  {
+    "file": "data\\raw\\Panasonic_18650PF\\0degC\\Drive cycles\\06-02-17_17.14 0degC_UDDS_Pan18650PF.mat",
+    "role": "held_out_validation",
+    "temperature_c": 0,
+    "sha256": "f43128fcacbd3f2c65955e02a0431be32addd1c0c847677cbe30e9d9054c6aa5",
+    "rows": 128521,
+    "ambient_source": "setpoint_fallback",
+    "ambient_imputed_rows": 128522,
+    "original_invalid_values": {
+      "Time": 0,
+      "Voltage": 0,
+      "Current": 0,
+      "Ah": 0,
+      "Battery_Temp_degC": 0,
+      "Chamber_Temp_degC": 128522
+    },
+    "max_sampling_interval_s": 2.2890038788318634,
+    "intervals_over_15s": 0,
+    "removed_duplicate_records": 1
+  }
+]

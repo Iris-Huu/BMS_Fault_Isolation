@@ -1,0 +1,85 @@
+{
+  "temperature_c": 25,
+  "parameters": {
+    "Q_Ah": 2.9,
+    "Cth_J_K": 57.21903673618499,
+    "hA_W_K": 0.09495864285999253,
+    "R0_ohm": 0.029423619646588704,
+    "R1_ohm": 0.004858396115217618,
+    "R2_ohm": 0.028207585448943383,
+    "C1_F": 674.6328332249328,
+    "C2_F": 1948.9219104759463,
+    "entropy_k0_v_k": -0.0001165690766432511,
+    "entropy_k1_v_k": -0.00013323136550434674
+  },
+  "capacity_basis": "2.9Ah nominal/protocol reference; not independently identified at each date",
+  "ocv_method": "monotone rested-HPPC voltage proxy; not independent C/20 calibration",
+  "supported_soc": [
+    0.0458068965517241,
+    1.0
+  ],
+  "parameter_aggregation": "unflagged_mid_soc_pulses",
+  "joint_fit_count": 28,
+  "aggregate_count": 16,
+  "thermal": {
+    "Cth_J_K": 65.56614127223503,
+    "hA_W_K": 0.10967508067138056,
+    "thermal_tau_s": 597.8216826545207,
+    "integral_window_count": 369,
+    "integral_rmse_c": 0.13420924029279258,
+    "design_column_correlation": -0.4126118604998417,
+    "at_bound": false,
+    "design_condition": 9.273143855993021
+  },
+  "thermal_heat_basis": "measured calibration current times (rested-voltage proxy minus measured voltage)",
+  "calibration_metrics": [
+    {
+      "cycle": 1,
+      "voltage": {
+        "rmse": 0.0339019277464617,
+        "mae": 0.013507809543435105,
+        "bias": 0.009204128500595663,
+        "max_abs": 0.6092910888452292
+      },
+      "temperature": {
+        "rmse": 0.4131867892172246,
+        "mae": 0.2949051615070542,
+        "bias": 0.02888161855695993,
+        "max_abs": 1.915690204326033
+      }
+    },
+    {
+      "cycle": 2,
+      "voltage": {
+        "rmse": 0.036015928369484515,
+        "mae": 0.015340048542728106,
+        "bias": 0.0069119950522357676,
+        "max_abs": 0.5415000634017808
+      },
+      "temperature": {
+        "rmse": 0.5466555719879255,
+        "mae": 0.35596722291806726,
+        "bias": -0.13311174740608256,
+        "max_abs": 2.433315483791951
+      }
+    }
+  ],
+  "status": "effective_entropy_sensitivity_not_thermodynamically_validated",
+  "initial_conditions": "SOC=1 and polarization=0 after recharge; measured first cell temperature",
+  "fault_interface": "fi[A], fv[V], fT[C], fisc[S], fQ[fraction], fR[fraction], onset_s[s]",
+  "missing_requirements": [
+    "independent date-specific capacity identification",
+    "C20/rested-OCV/date reconciliation",
+    "validated colored/quantized measurement likelihood",
+    "model-error acceptance review"
+  ],
+  "entropy_thermal_fit": {
+    "Cth_J_K": 57.21903673618499,
+    "hA_W_K": 0.09495864285999253,
+    "entropy_k0_v_k": -0.0001165690766432511,
+    "entropy_k1_v_k": -0.00013323136550434674,
+    "integral_rmse_c": 0.13056626296899784,
+    "at_bound": false,
+    "basis": "effective heat correction fitted on Cycle1/2; not independent thermodynamic entropy measurement"
+  }
+}

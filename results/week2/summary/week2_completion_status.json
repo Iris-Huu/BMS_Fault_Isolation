@@ -1,0 +1,25 @@
+{
+  "computational_work": "completed_for_available_data",
+  "final_scientific_acceptance": "conditional_not_unqualified",
+  "closed_items": [
+    "198-file timestamp and capacity-reference audit",
+    "charge-coordinate consistency with numerical invariance test",
+    "held-out HPPC group interpolation check",
+    "calibration-only current/voltage response fit",
+    "positive SOC/temperature resistance calibration",
+    "forward thermal fit and ambient-offset sensitivity",
+    "empirical block-noise model, quantized likelihood and colored covariance implementation",
+    "six development validations plus three additional fixed-parameter Cycle4 evaluations"
+  ],
+  "irreducible_data_limits": [
+    "independent Panasonic 10C/0C C20 not located in local raw data; LG counterparts exist",
+    "missing low-temperature chamber measurements cannot be reconstructed independently",
+    "physical equilibrium capacity and current-sensor-only noise not separately identifiable"
+  ],
+  "observed_validation_failures": [
+    "nominal 95% prediction envelopes do not achieve 95% voltage coverage in every operating condition",
+    "noise window exchangeability and sub-native-cadence correlation are not proven"
+  ],
+  "usage": "model and algorithms may be studied conditionally; do not label weak-fault boundaries as unconditional experimentally validated limits",
+  "source_data_recheck": "audit/source_data_recheck.csv"
+}

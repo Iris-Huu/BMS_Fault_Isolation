@@ -1,0 +1,15 @@
+{
+  "status": "baseline_implemented_acceptance_not_complete",
+  "issues": [
+    "25C resting-current noise not identifiable from logged zeros",
+    "10C resting-current noise not identifiable from logged zeros",
+    "0C resting-current noise not identifiable from logged zeros"
+  ],
+  "global_gates": [
+    "independent low-temperature C20 unavailable; rested-HPPC voltage remains a labeled substitute",
+    "capacity/date reconciliation",
+    "systematic model-error review",
+    "quantized/colored noise likelihood"
+  ],
+  "calibration_validation_overlap": false
+}

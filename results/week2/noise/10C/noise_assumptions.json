@@ -1,0 +1,26 @@
+{
+  "channels": [
+    "current_A",
+    "voltage_V",
+    "temperature_C"
+  ],
+  "rest_windows": 48,
+  "samples": 5778,
+  "lag1_correlation": [
+    null,
+    0.11720375803520496,
+    0.1410766594123596
+  ],
+  "temperature_large_jump_scale_c": 0.20847499999999997,
+  "temperature_min_observed_spacing_c": 0.01157333333333277,
+  "current_noise_unidentified": true,
+  "active_plateau_current_std_proxy_a": 0.00040393705976872116,
+  "current_proxy_definition": "median detrended current variance on constant-current pulse interiors; includes controller ripple, not a pure sensor-noise estimate",
+  "temperature_floor_definition": "empirical large-jump scale squared / 12; sensitivity assumption, not proven uniform ADC noise",
+  "limitations": [
+    "Demeaning/detrending removes local drift, not all process noise.",
+    "Quantization and serial correlation violate the untested iid-Gaussian assumption.",
+    "Effective covariance adds a conservative temperature sensitivity floor and numerical regularization.",
+    "If resting current is identically zero, current-sensor noise remains unidentified."
+  ]
+}

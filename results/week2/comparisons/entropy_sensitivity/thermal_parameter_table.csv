@@ -1,0 +1,4 @@
+temperature_c,Cth_J_K,hA_W_K,entropy_k0_v_k,entropy_k1_v_k,integral_rmse_c,at_bound,basis
+25,57.21903673618499,0.09495864285999253,-0.0001165690766432511,-0.00013323136550434674,0.13056626296899784,False,effective heat correction fitted on Cycle1/2; not independent thermodynamic entropy measurement
+10,53.94425836000538,0.09108067821684135,-0.00017340319484441245,5.3200642022675934e-05,0.146142487816219,False,effective heat correction fitted on Cycle1/2; not independent thermodynamic entropy measurement
+0,59.712628103035705,0.11239328912311192,-8.660730116014755e-05,8.88354510792971e-05,0.3786815745652903,False,effective heat correction fitted on Cycle1/2; not independent thermodynamic entropy measurement

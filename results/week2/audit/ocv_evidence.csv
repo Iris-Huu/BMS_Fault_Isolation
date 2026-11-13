@@ -1,0 +1,4 @@
+temperature_c,independent_c20_available,held_out_groups,covered_points,group_cv_rmse_mv,group_cv_max_abs_mv,interpretation
+25,True,12,107,10.869927004954633,34.403201861289205,"HPPC rested-voltage interpolation across held-out SOC groups, not independent equilibrium OCV accuracy"
+10,False,11,95,7.821902176570377,14.065990184757737,"HPPC rested-voltage interpolation across held-out SOC groups, not independent equilibrium OCV accuracy"
+0,False,10,87,7.37373026841495,13.908942975954464,"HPPC rested-voltage interpolation across held-out SOC groups, not independent equilibrium OCV accuracy"

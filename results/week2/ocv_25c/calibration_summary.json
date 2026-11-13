@@ -1,0 +1,30 @@
+{
+  "source": "data\\raw\\Panasonic_18650PF\\Panasonic 18650PF Data\\25degC\\C20 OCV and 1C discharge tests_start_of_tests\\05-08-17_13.26 C20 OCV Test_C20_25dC.mat",
+  "method": "SOC-bin medians + PCHIP; discharge terminal-voltage proxy",
+  "phase": 2,
+  "capacity_ah": 2.99491,
+  "integrated_discharge_ah": 2.994979138519428,
+  "charge_soc_range_same_reference": [
+    0.0008046986386903932,
+    0.873585516760103
+  ],
+  "full_curve_approximation": {
+    "rmse_mv": 0.3319268260115176,
+    "mae_mv": 0.23889900191582206,
+    "max_abs_mv": 2.7995823265447584
+  },
+  "interleaved_interpolation_holdout": {
+    "rmse_mv": 0.3135337265108527,
+    "mae_mv": 0.2431500150246144,
+    "max_abs_mv": 1.2824191719911227
+  },
+  "negative_grid_increments": 0,
+  "limitations": [
+    "Terminal voltage under load is not equilibrium OCV.",
+    "SOC endpoints are defined by this discharge window.",
+    "Holdout checks interpolation, not accuracy on a new experiment.",
+    "May C/20 and March HPPC/US06 dates differ; transfer is unvalidated.",
+    "Only 25C C/20 located; no independent 10C or 0C OCV calibration.",
+    "No extrapolation beyond relative SOC [0,1]."
+  ]
+}

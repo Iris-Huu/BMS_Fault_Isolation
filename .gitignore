@@ -1,4 +1,4 @@
-﻿# Python virtual environment
+# Python virtual environment
 .venv/
 venv/
 env/
@@ -36,3 +36,26 @@ desktop.ini
 
 # Temporary files
 *.bak
+
+# Local backup snapshots and superseded exploration outputs
+/archive/backups/
+/archive/results/
+
+# Additional caches and temporary outputs
+.ruff_cache/
+*.tmp
+*.out
+
+# Private keys and local credentials
+*.key
+*.pem
+credentials*.json
+/secrets/
+/private/
+
+# Row-level processed measurements and residual blocks
+/results/week2/**/trajectory_*_1s.csv
+/results/week2/ocv_25c/charge_soc_same_reference.csv
+/results/week2/ocv_25c/discharge_soc.csv
+/results/week2/ocv_25c/fit_residuals.csv
+/results/week2/noise/**/empirical_rest_blocks.npz

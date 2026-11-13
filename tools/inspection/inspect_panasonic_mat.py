@@ -7,7 +7,7 @@ import numpy as np
 # 1. 获取项目根目录
 # =====================================
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 
 # =====================================

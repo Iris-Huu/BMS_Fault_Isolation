@@ -9,7 +9,7 @@ from scipy.io import loadmat
 # 1. 定位项目和 MAT 文件
 # ==================================================
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 
 DATA_DIR = (
