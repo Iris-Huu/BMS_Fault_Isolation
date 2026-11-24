@@ -1,0 +1,62 @@
+{
+  "channel_order": [
+    "current_A",
+    "voltage_V",
+    "temperature_C"
+  ],
+  "native_covariance_cadence_s": 1.0,
+  "selected_sample_interval_quantiles_s": [
+    0.9910024702548981,
+    1.0000046342611313,
+    1.0089967399835587
+  ],
+  "original_samples": 102440,
+  "selected_samples": 10253,
+  "segments": [
+    0,
+    316,
+    917,
+    1513,
+    2884,
+    4321,
+    5088,
+    5690,
+    6286,
+    7657,
+    9094,
+    9861,
+    10253
+  ],
+  "bias_voltage_v": 0.00015182111924916052,
+  "bias_temperature_c": -0.08466717318109325,
+  "residual_file": "data/processed/week3_preparation/25C_cycle3_residuals.csv",
+  "residual_sha256": "367dd7f9ed76d2a737e7850c8778649a51ae03cab35ccf6127bbf35408f8b8cf",
+  "source_file": "data/raw/Panasonic_18650PF/Panasonic 18650PF Data/25degC/Drive cycles/03-19-17_09.07 25degC_Cycle_3_Pan18650PF.mat",
+  "source_sha256": "e7623286ed0f3269021141e2efdba95eb648a68e725d2c63520ce693623511fb",
+  "frozen_parameter_sha256": "cf3be812130fedc011f2512f97acf8e6fb9f1cd7370ea2f4ac0cb811e2be36fe",
+  "lag_orientation": "Gamma[k,a,b]=E[e_a(t)*e_b(t+k)]; negative lags use transpose",
+  "covariance_construction": "PSD positive part of Cycle3 residual covariance minus sensor covariance; avoids counting sensor variance twice",
+  "model_discrepancy_covariance": [
+    [
+      0.00020925997997962826,
+      9.105799798580046e-05
+    ],
+    [
+      9.105799798580046e-05,
+      0.05420992646886935
+    ]
+  ],
+  "limitations": [
+    "Current variance is controller-ripple plus sensor proxy, not independently identified sensor noise.",
+    "Global residual mean is retained separately as systematic bias, not whitened away as iid noise.",
+    "Residual covariance is a stationary Cycle3 surrogate; transfer to rest and other cycles is unproven.",
+    "Samples are selected without interpolation at about 1 s; sub-second covariance is not observed.",
+    "Ambient perturbation must be treated as a nuisance separately; bias is not a measured ambient offset."
+  ],
+  "colored_channel_order": [
+    "voltage_V",
+    "temperature_C"
+  ],
+  "current_temporal_model": "independent 1-second surrogate; current sensor not separately identified",
+  "text_hash_policy": "UTF-8, no BOM, LF normalized; binary hashes exact"
+}

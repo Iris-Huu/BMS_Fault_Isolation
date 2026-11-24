@@ -1,0 +1,72 @@
+{
+  "MSO1": {
+    "equation_indices_zero_based": [
+      11,
+      12,
+      13,
+      7,
+      3,
+      4,
+      5,
+      9,
+      10,
+      2,
+      8,
+      1
+    ],
+    "equation_count": 12,
+    "unknowns": [
+      "I_cell",
+      "i_s",
+      "v",
+      "SOC",
+      "dSOC",
+      "v1",
+      "dv1",
+      "v2",
+      "dv2",
+      "T",
+      "dT"
+    ],
+    "unknown_count": 11,
+    "redundancy": 1
+  },
+  "MSO2": {
+    "equation_indices_zero_based": [
+      11,
+      12,
+      13,
+      7,
+      3,
+      4,
+      5,
+      9,
+      10,
+      2,
+      8,
+      0,
+      6
+    ],
+    "equation_count": 13,
+    "unknowns": [
+      "I_cell",
+      "i",
+      "i_s",
+      "v",
+      "SOC",
+      "dSOC",
+      "v1",
+      "dv1",
+      "v2",
+      "dv2",
+      "T",
+      "dT"
+    ],
+    "unknown_count": 12,
+    "redundancy": 1
+  },
+  "source_branch": "origin/feature/structural (local reference only)",
+  "source_commit": "fc42cff4a1066331227ea5f6cbcc0c0246fb307e",
+  "physical_explanation_draft": "MSO1不使用电流测量方程和端口电流平衡方程，通过电压、电荷及极化动态约束电芯电流，再检查热平衡与温度测量的一致性，因此对内短路敏感而不含电流偏置。MSO2去掉内短路本构方程，利用电压反推电芯电流与测得端口电流之差作为候选漏电流，再检查其应有产热是否与温度一致，从而约束电流偏置。两条关系都依赖热模型和温度测量；结构上可隔离不意味着小故障已经在噪声和环境干扰下可定量分辨。",
+  "scope": "Read-only hand calculation against the existing symbolic branch; not a merge or certification of the unspecified 12 corrections."
+}

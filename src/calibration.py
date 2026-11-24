@@ -29,16 +29,33 @@ def prepare_dynamic_calibration(frame,ocv,tau1,tau2,reference_temp,activations):
                 temperature=frame.Battery_Temp_degC.to_numpy(),ambient=frame.Chamber_Temp_degC.to_numpy())
 
 
-def dynamic_design(record,blend):
-    hats=record["hats"]
-    current=(1-blend)*record["current"]+blend*record["previous_current"]
-    return np.column_stack([hats*(current*record["thermal"][0])[:,None],
-                            hats*(record["filters"][0]*record["thermal"][1])[:,None],
-                            hats*(record["filters"][1]*record["thermal"][2])[:,None],-hats])
+def voltage_readout(values, blend):
+    """Same one-sample observation operator used by model.simulate.
+
+    The first observation is unchanged. Works for vectors and design matrices.
+    """
+    values = np.asarray(values, dtype=float)
+    if not 0 <= blend <= 1:
+        raise ValueError("Readout blend must lie in [0, 1]")
+    return (1-blend)*values + blend*np.concatenate([values[:1], values[:-1]], axis=0)
 
 
-def fit_dynamic_electrical(records,prior,reference_temp,activations,tau1,tau2):
-    """Cycle1 fit / Cycle2 readout-blend selection, then refit both calibration cycles.
+def dynamic_design(record, blend):
+    """Blend the complete instantaneous voltage design, not only current."""
+    hats = record["hats"]
+    current = record["current"]
+    instantaneous = np.column_stack([
+        hats*(current*record["thermal"][0])[:, None],
+        hats*(record["filters"][0]*record["thermal"][1])[:, None],
+        hats*(record["filters"][1]*record["thermal"][2])[:, None], -hats])
+    return voltage_readout(instantaneous, blend)
+
+
+def fit_dynamic_electrical(records,prior,reference_temp,activations,tau1,tau2,readout_blends=(0.,)):
+    """Cycle1 fit / Cycle2 evaluation, then refit both calibration cycles.
+
+HPPC edge audit does not support a one-sample lag. The default is zero blend.
+Alternative blends must be requested explicitly; the full voltage operator is used.
 
 Coefficients are bounded positive resistances plus bounded OCV corrections.
 Hyperparameters and priors are never selected using US06/UDDS errors.
@@ -53,7 +70,7 @@ Hyperparameters and priors are never selected using US06/UDDS errors.
             # About two samples/second; keep original sampled values, not smoothed outputs.
             keep=np.r_[True,np.floor(record["time"][1:]*2)!=np.floor(record["time"][:-1]*2)]
             aa.append(dynamic_design(record,blend)[keep]*scale)
-            yy.append((record["ocv"]-record["voltage"])[keep])
+            yy.append((voltage_readout(record["ocv"],blend)-record["voltage"])[keep])
         a=np.vstack(aa);y=np.concatenate(yy)
         regularization=np.diag(np.r_[np.full(18,.0015),np.full(6,.003)])*np.sqrt(len(y))
         weights=np.ones(len(y));solution=center.copy()
@@ -69,9 +86,9 @@ Hyperparameters and priors are never selected using US06/UDDS errors.
         return solution*scale
     scores=[]
     second=records[1]
-    for blend in [0.,.25,.5,.75,1.]:
+    for blend in readout_blends:
         coefficients=fit(records[:1],blend)
-        residual=second["ocv"]-dynamic_design(second,blend)@coefficients-second["voltage"]
+        residual=voltage_readout(second["ocv"],blend)-dynamic_design(second,blend)@coefficients-second["voltage"]
         scores.append(dict(blend=blend,calibration_cycle2_rmse_mv=float(np.sqrt(np.mean(residual**2))*1000)))
     chosen=min(scores,key=lambda r:r["calibration_cycle2_rmse_mv"])["blend"]
     coefficients=fit(records,chosen)

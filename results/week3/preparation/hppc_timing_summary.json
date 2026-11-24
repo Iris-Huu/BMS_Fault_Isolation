@@ -1,0 +1,23 @@
+[
+  {
+    "temperature_c": 0,
+    "edges": 54,
+    "median_immediate_fraction": 0.7269295303771351,
+    "delayed_fraction": 0.0,
+    "decision": "blend=0; universal one-sample voltage delay not supported"
+  },
+  {
+    "temperature_c": 10,
+    "edges": 59,
+    "median_immediate_fraction": 0.7717327025428742,
+    "delayed_fraction": 0.0,
+    "decision": "blend=0; universal one-sample voltage delay not supported"
+  },
+  {
+    "temperature_c": 25,
+    "edges": 67,
+    "median_immediate_fraction": 0.7731280122252278,
+    "delayed_fraction": 0.0,
+    "decision": "blend=0; universal one-sample voltage delay not supported"
+  }
+]

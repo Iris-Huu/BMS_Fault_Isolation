@@ -1,0 +1,48 @@
+{
+  "model_id": "model-v1",
+  "reference_commit_before_preparation": "d83064b",
+  "primary_temperatures_c": [
+    25,
+    10
+  ],
+  "supplementary_temperatures_c": [
+    0
+  ],
+  "physical_parameter_refit": false,
+  "observation_change": "remove unsupported blend (0.75 -> 0)",
+  "reference_ambient_policy": "retain accepted Week2 ambient input and effective offset; pre-rest alternatives remain sensitivity cases",
+  "noise_policy": "Cycle3 residual colored covariance with separate bias and ambient nuisance",
+  "files": {
+    "src/model.py": "2a13df8daae851463ca40f836a001c33a96df83ee944c289a8bdf76a945cc9d8",
+    "src/calibration.py": "078fc02c856ac6bcf2db785790e8a5330c1b2a02f1e47425f94419b8b325a782",
+    "src/io.py": "8eb71afcf05272429cb7b72bd5581dfd4ea5a76459c5763b39f76c7ed288ca0d",
+    "src/noise.py": "528c32c85ad838a1cba9559b862ae9d4df1df7bdc2d94b6d02e75e8815d1cf7d",
+    "src/preparation.py": "158dee850e40fc1ebddb5c4f42183e4c4aa07ab98777ef8506b3b3003d8dc036",
+    "experiments/prepare_week3.py": "4b3c922f6f3e61c2490d7e5b8572a2d429dd5acff01cadf3c101f37daa62a4fe",
+    "requirements.txt": "b51dfe5267511677f7d967722ffea1d6a28a5b90a034fe290afa3161600417bd",
+    "results/week3/preparation/input_interface.json": "8f1b3c69c0fb25565f6479c3bcb033b89355f67c33d86d1623e70ceb19b5d8c4",
+    "results/week3/preparation/ambient_nuisance_definition.json": "65dca9094f811533e4275da122d5f0bc970fe3668ee9916adde21814346ad51f",
+    "results/week2/comparisons/calibration_refinement/25C/parameters.json": "b52a13a00a9952de213ef7688583f9fbc883288e5a6160e73f2c2403ca0e2e08",
+    "results/week2/parameters/ocv_25C.csv": "882634b4140c3ea926865644106e8551ec249737cb568888d3d2c916be09bade",
+    "results/week3/preparation/model_v1/25C.json": "cf3be812130fedc011f2512f97acf8e6fb9f1cd7370ea2f4ac0cb811e2be36fe",
+    "results/week3/preparation/noise/25C/noise_interface.json": "a368469f719d195b3edcc9752afb738dcb7d0800d68662ec3091e3e1cd9467d1",
+    "results/week3/preparation/noise/25C/sensor_surrogate_covariance.csv": "3bce933dec5aac427aa5becbfa5cece4e39fb87e52a4d22b324b5e7b056a3a80",
+    "results/week3/preparation/noise/25C/sensor_and_model_covariance.csv": "d15955f2fd46c248a641f2252371ff0de0dfd68e87f8e6a1fd24c00657eab913",
+    "results/week3/preparation/noise/25C/cycle3_colored_autocovariance.npz": "3c02264f6a34a1c320c4f44c47652f6a01e3fd0ad6b106f534989ae8ea4b154c",
+    "results/week2/comparisons/calibration_refinement/10C/parameters.json": "be42067caca080831f6f7a41b511b3e80e7e08cbda94b9bc997f805d453acce0",
+    "results/week2/parameters/ocv_10C.csv": "6839356ec23aaf5f7c2cc45a9abf37cb5572d7d07c970ec1f513e9714c73485b",
+    "results/week3/preparation/model_v1/10C.json": "8fcbb0962e0227831b880c37923750c2c36c4fc71d518698f2b6567fc669cfde",
+    "results/week3/preparation/noise/10C/noise_interface.json": "eea48622c3af9470842aa742ddd1d2c8de81f3d27a1f5a271a18a9f95070ad44",
+    "results/week3/preparation/noise/10C/sensor_surrogate_covariance.csv": "370fefd8c8e34e6f1b5b782f36c1a9bfac7b92ba415c1daca7bd505076f6e171",
+    "results/week3/preparation/noise/10C/sensor_and_model_covariance.csv": "7324d3ae9f0ea75c0c876d8a8d51d927f2abba08349f52659c597a2f596c236c",
+    "results/week3/preparation/noise/10C/cycle3_colored_autocovariance.npz": "f30ab87a03b6a91fbe37546aaf119321ab7c44efe8df011e29a2ab32e3399e8a",
+    "results/week2/comparisons/calibration_refinement/0C/parameters.json": "d76837e513905195de3611eb502de1aea6fe9f0ad1565875624ff283b4e6d24b",
+    "results/week2/parameters/ocv_0C.csv": "330565591e008ae2d74aa3d50f3fc881a399bfcb9c84351040945e20c0a4b81b",
+    "results/week3/preparation/model_v1/0C.json": "deb7a3b8cf488a23cfd09c4eb8b503af675bc8d21b398df413d593689dfd3f6a",
+    "results/week3/preparation/noise/0C/noise_interface.json": "b2310b9b6fee2c53fc31fd82a3a980bb69f3583c5be43e25fa1a219cc239c308",
+    "results/week3/preparation/noise/0C/sensor_surrogate_covariance.csv": "21862d1098a12f043e19a4c63229e5a7d433c8a3d474c1fe0bb2bfe100c676a9",
+    "results/week3/preparation/noise/0C/sensor_and_model_covariance.csv": "b3408853b7e366ea7a651155671c04d2975e8616a1ca754aaf7b5f0ae887393c",
+    "results/week3/preparation/noise/0C/cycle3_colored_autocovariance.npz": "bdb74ef38b5125342b2b25c9edc9bf103c723ae71e845faa23c5426f643890a1"
+  },
+  "text_hash_policy": "UTF-8, no BOM, LF normalized; binary hashes exact"
+}
