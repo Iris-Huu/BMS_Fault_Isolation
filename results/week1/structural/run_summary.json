@@ -1,0 +1,312 @@
+{
+  "toolbox_version": "0.12.5",
+  "upstream_structural_commit": "fc42cff4a1066331227ea5f6cbcc0c0246fb307e",
+  "symbolic_model": "src/structural_model.py",
+  "numerical_model": "src/model.py (unchanged)",
+  "result": "Without the thermal channel fi/fisc are structurally inseparable; adding thermal balance and temperature measurement separates all six reference faults.",
+  "scope": "Constant-parameter symbolic reference; quantitative robustness under model-v1 parameter maps and ambient nuisance is a separate calculation.",
+  "models": {
+    "nonthermal_model": {
+      "model": "nonthermal_model",
+      "fault_names": [
+        "f_i",
+        "f_v",
+        "f_isc",
+        "f_Q",
+        "f_R"
+      ],
+      "equation_count": 11,
+      "unknown_count": 10,
+      "detectable": [
+        "f_i",
+        "f_v",
+        "f_isc",
+        "f_Q",
+        "f_R"
+      ],
+      "not_detectable": [],
+      "mso_count": 1,
+      "low_index_mso_count": 1,
+      "selected_test_count": 1,
+      "selected_low_index_indices_zero_based": [
+        0
+      ],
+      "isolability_convention": "rows/columns follow model.f; 1=not isolable, 0=isolable; diagonal=1",
+      "fsm_convention": "1=sensitive, 0=insensitive",
+      "integral_matrix": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "mixed_matrix": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "dm": {
+        "row_permutation": [
+          0,
+          6,
+          1,
+          5,
+          8,
+          2,
+          3,
+          9,
+          4,
+          10,
+          7
+        ],
+        "column_permutation": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "underdetermined_equations": 0,
+        "just_determined_equations": 0,
+        "overdetermined_equations": 11
+      }
+    },
+    "thermal_model": {
+      "model": "thermal_model",
+      "fault_names": [
+        "f_i",
+        "f_v",
+        "f_isc",
+        "f_Q",
+        "f_R",
+        "f_T"
+      ],
+      "equation_count": 14,
+      "unknown_count": 12,
+      "detectable": [
+        "f_i",
+        "f_v",
+        "f_isc",
+        "f_Q",
+        "f_R",
+        "f_T"
+      ],
+      "not_detectable": [],
+      "mso_count": 6,
+      "low_index_mso_count": 6,
+      "selected_test_count": 6,
+      "selected_low_index_indices_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "isolability_convention": "rows/columns follow model.f; 1=not isolable, 0=isolable; diagonal=1",
+      "fsm_convention": "1=sensitive, 0=insensitive",
+      "integral_matrix": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "mixed_matrix": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "dm": {
+        "row_permutation": [
+          0,
+          6,
+          1,
+          5,
+          8,
+          2,
+          3,
+          9,
+          4,
+          10,
+          11,
+          13,
+          7,
+          12
+        ],
+        "column_permutation": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "underdetermined_equations": 0,
+        "just_determined_equations": 0,
+        "overdetermined_equations": 14
+      }
+    }
+  }
+}

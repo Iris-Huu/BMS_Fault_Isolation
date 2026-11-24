@@ -1,0 +1,1 @@
+IndexError('arrays used as indices must be of integer (or boolean) type')

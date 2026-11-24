@@ -1,0 +1,12 @@
+index_zero_based,equation,unknowns,faults
+0,"Eq(I_cell - i - i_s, 0)",I_cell;i;i_s,
+1,"Eq(-f_isc*v + i_s, 0)",i_s;v,f_isc
+2,"Eq(I_cell/(3600*Q*(1 - f_Q)) + dSOC, 0)",I_cell;dSOC,f_Q
+3,"Eq(dv1 - I_cell/C1 + v1/(C1*R1), 0)",I_cell;v1;dv1,
+4,"Eq(dv2 - I_cell/C2 + v2/(C2*R2), 0)",I_cell;v2;dv2,
+5,"Eq(I_cell*R0*(f_R + 1) + v + v1 + v2 - OCV(SOC), 0)",I_cell;v;SOC;v1;v2,f_R
+6,"Eq(-f_i - i + y_i, 0)",i,f_i
+7,"Eq(-f_v - v + y_v, 0)",v,f_v
+8,"['dSOC', 'SOC', 'diff']",SOC;dSOC,
+9,"['dv1', 'v1', 'diff']",v1;dv1,
+10,"['dv2', 'v2', 'diff']",v2;dv2,

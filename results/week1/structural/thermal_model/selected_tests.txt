@@ -1,0 +1,8 @@
+Number of selected tests: 6
+
+Test 1: low-index MSO 1, equations [11, 12, 13, 7, 3, 4, 5, 9, 10, 2, 8, 1]
+Test 2: low-index MSO 2, equations [11, 12, 13, 7, 3, 4, 5, 9, 10, 2, 8, 0, 6]
+Test 3: low-index MSO 3, equations [11, 12, 13, 7, 3, 4, 5, 9, 10, 1, 0, 6]
+Test 4: low-index MSO 4, equations [11, 12, 13, 7, 2, 8, 1, 0, 6]
+Test 5: low-index MSO 5, equations [11, 12, 13, 3, 4, 5, 9, 10, 2, 8, 1, 0, 6]
+Test 6: low-index MSO 6, equations [7, 3, 4, 5, 9, 10, 2, 8, 1, 0, 6]

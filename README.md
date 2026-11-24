@@ -8,11 +8,11 @@
 
 | 目录或文件 | 用途 |
 | --- | --- |
-| `src/` | 数据读取、OCV、参数标定、数值模型、噪声与准备方法 |
+| `src/` | 数据读取、参数标定、数值电热模型、符号结构模型及噪声方法 |
 | `experiments/` | 标定、验证、比较和数据准备入口 |
 | `tests/` | 数据读取、物理关系和数值一致性检查 |
 | `tools/` | 数据来源审计及汇总工具 |
-| `results/week1/` | US06原始测量图 |
+| `results/week1/` | US06原始测量图与`structural/`无热/含热结构分析结果 |
 | `results/week2/` | 第二周基线、改进参数与原有验证证据，保留原样 |
 | `results/week3/preparation/` | 时序与环境核查、冻结参数、Cycle3噪声接口及复核结果 |
 | `data/raw/` | 原始实验数据，Git忽略 |
@@ -149,6 +149,9 @@ Cycle3均值偏差单独记录，不能通过当成零均值白噪声而消失�
 # 第一周测量图
 .\.venv\Scripts\python.exe -B experiments\plot_us06.py
 
+# 结构分析：不标定电池参数
+.\.venv\Scripts\python.exe -B experiments\run_structural.py
+
 # 第二周独立25°C C/20
 .\.venv\Scripts\python.exe -B experiments\calibrate_ocv_25c.py --project-root . --output-dir data\processed\week2_reproduction\ocv_25c
 
@@ -161,6 +164,7 @@ Cycle3均值偏差单独记录，不能通过当成零均值白噪声而消失�
 # 数值与数据检查；含合成参数恢复检查
 .\.venv\Scripts\python.exe -B tests\verify_week2.py --project-root . --results-dir results\week2
 .\.venv\Scripts\python.exe -B tests\check_week3_preparation.py
+.\.venv\Scripts\python.exe -B tests\check_structural.py
 ```
 
 仅运行基础模型：
@@ -177,13 +181,26 @@ Cycle3均值偏差单独记录，不能通过当成零均值白噪声而消失�
 
 历史第二周结果对应当时0.75读出设置。新标定默认零混合，不承诺重现历史数字；后续主计算读取model-v1冻结参数，不运行重新标定来追逐验证误差。
 
-## 9. 结构分析补交依据
+## 9. 结构可隔离性分析
 
-`structural_handoff.json`按本地结构分支固定提交的方程集记录：MSO1有12条方程、11个未知量；MSO2有13条方程、12个未知量，冗余度均为1。编号以该文件记录的方程集合与源提交为准。
+结构分支的符号模型与分析已整合：`src/structural_model.py`建立方程，`src/structural.py`执行分析，`experiments/run_structural.py`为独立入口。`src/model.py`继续用于数值仿真，model-v1冻结文件不变。
 
-物理解释草稿：MSO1通过电压、电量和极化动态约束电芯电流，再检查热平衡与温度测量的一致性，对内短路敏感而不包含电流偏置。MSO2去掉漏电本构方程，以反推电芯电流与测得端口电流之差作为候选漏电流，并检查其产热与温度的一致性，从而约束电流偏置。两者均依赖热通道；定量分辨能力还受环境干扰和模型误差影响。
+结果保存到`results/week1/structural/`，包含检测性、积分/混合因果矩阵、DM分解、MSO及详细方程、低指标MSO、测试选择和故障签名矩阵。`figure2_structural_isolability.png`为两模型矩阵草图，`run_summary.json`记录来源和方法。
 
-本轮没有修改或合并结构分支。反馈所提12条修订和文献[2]原文尚未在当前可用资料中定位，未将其标记为已完成。
+| 参考模型 | 方程/未知量 | MSO | 低指标MSO | 保留测试 | 结构结论 |
+| --- | --- | ---: | ---: | ---: | --- |
+| 无热通道 | 11/10 | 1 | 1 | 1 | 电流偏置与内短路不能隔离 |
+| 含热平衡及温度测量 | 14/12 | 6 | 6 | 6 | 六类参考故障两两可隔离 |
+
+可隔离性矩阵中1表示不能隔离、0表示能隔离，对角线为1；FSM中的1则表示对故障敏感。两者含义不同。所有矩阵按model.f原顺序保存，不随图形重排。
+
+工具箱的最小隔离测试选择对无热模型返回空集，因为没有可隔离故障对。现保留单个MSO以同时满足检测要求。原非热DM错误记录作为`legacy_DM_plot_error.txt`保留；新图直接使用同一工具箱的DM分区和整数索引，修复空方块索引问题。
+
+按记录的方程集，MSO1有12条方程、11个未知量，MSO2有13条方程、12个未知量，冗余度均为1。`MSO_details.json`给出逐项方程、未知量及签名，便于复核。
+
+MSO1通过电压、电量和极化动态约束电芯电流，再检查热平衡与温度测量的一致性，对内短路敏感而不包含电流偏置。MSO2去掉漏电本构方程，以反推电芯电流与测得端口电流之差作为候选漏电流，并检查其产热与温度的一致性，从而约束电流偏置。
+
+结构分析采用常参数符号参考模型；model-v1的SOC/温度参数映射、环境干扰及模型误差下的定量分辨能力仍由后续灵敏度和D_ij计算检验。本次没有将未提供的“12条修订清单”或文献[2]阅读标记为完成。
 
 ## 10. 下一阶段
 

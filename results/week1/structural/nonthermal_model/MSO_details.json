@@ -1,0 +1,54 @@
+[
+  {
+    "mso": 1,
+    "equation_indices_zero_based": [
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "equation_count": 11,
+    "unknowns": [
+      "I_cell",
+      "i",
+      "i_s",
+      "v",
+      "SOC",
+      "dSOC",
+      "v1",
+      "dv1",
+      "v2",
+      "dv2"
+    ],
+    "unknown_count": 10,
+    "redundancy": 1,
+    "equations": [
+      "['dv2', 'v2', 'diff']",
+      "['dv1', 'v1', 'diff']",
+      "['dSOC', 'SOC', 'diff']",
+      "Eq(-f_v - v + y_v, 0)",
+      "Eq(-f_i - i + y_i, 0)",
+      "Eq(I_cell*R0*(f_R + 1) + v + v1 + v2 - OCV(SOC), 0)",
+      "Eq(dv2 - I_cell/C2 + v2/(C2*R2), 0)",
+      "Eq(dv1 - I_cell/C1 + v1/(C1*R1), 0)",
+      "Eq(I_cell/(3600*Q*(1 - f_Q)) + dSOC, 0)",
+      "Eq(-f_isc*v + i_s, 0)",
+      "Eq(I_cell - i - i_s, 0)"
+    ],
+    "fault_signature": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "low_index": true
+  }
+]

@@ -1,0 +1,9 @@
+Total MSO sets: 6
+Low-index MSO sets: 6
+
+Low-index MSO 1: [11, 12, 13, 7, 3, 4, 5, 9, 10, 2, 8, 1]
+Low-index MSO 2: [11, 12, 13, 7, 3, 4, 5, 9, 10, 2, 8, 0, 6]
+Low-index MSO 3: [11, 12, 13, 7, 3, 4, 5, 9, 10, 1, 0, 6]
+Low-index MSO 4: [11, 12, 13, 7, 2, 8, 1, 0, 6]
+Low-index MSO 5: [11, 12, 13, 3, 4, 5, 9, 10, 2, 8, 1, 0, 6]
+Low-index MSO 6: [7, 3, 4, 5, 9, 10, 2, 8, 1, 0, 6]

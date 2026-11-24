@@ -1,0 +1,170 @@
+{
+  "model": "thermal_model",
+  "fault_names": [
+    "f_i",
+    "f_v",
+    "f_isc",
+    "f_Q",
+    "f_R",
+    "f_T"
+  ],
+  "equation_count": 14,
+  "unknown_count": 12,
+  "detectable": [
+    "f_i",
+    "f_v",
+    "f_isc",
+    "f_Q",
+    "f_R",
+    "f_T"
+  ],
+  "not_detectable": [],
+  "mso_count": 6,
+  "low_index_mso_count": 6,
+  "selected_test_count": 6,
+  "selected_low_index_indices_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "isolability_convention": "rows/columns follow model.f; 1=not isolable, 0=isolable; diagonal=1",
+  "fsm_convention": "1=sensitive, 0=insensitive",
+  "integral_matrix": [
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "mixed_matrix": [
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "dm": {
+    "row_permutation": [
+      0,
+      6,
+      1,
+      5,
+      8,
+      2,
+      3,
+      9,
+      4,
+      10,
+      11,
+      13,
+      7,
+      12
+    ],
+    "column_permutation": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "underdetermined_equations": 0,
+    "just_determined_equations": 0,
+    "overdetermined_equations": 14
+  }
+}
