@@ -1,0 +1,77 @@
+{
+  "parameters": {
+    "Q_Ah": 2.9,
+    "Cth_J_K": 65.62456362250545,
+    "hA_W_K": 0.11472771087270028,
+    "R0_ohm": 0.02878712321196317,
+    "R1_ohm": 0.004810600545936277,
+    "R2_ohm": 0.02721035059968298,
+    "C1_F": 681.335626361043,
+    "C2_F": 2020.3481436842908,
+    "resistance_soc_model": {
+      "reference_temperature_c": 25.0,
+      "soc_knots": [
+        0.0,
+        0.2,
+        0.4,
+        0.6000000000000001,
+        0.8,
+        1.0
+      ],
+      "R0_ohm": [
+        0.07797041511995878,
+        0.033029022826308936,
+        0.029361920997766484,
+        0.028212325426159854,
+        0.02858420875313265,
+        0.03646923350282263
+      ],
+      "R1_ohm": [
+        0.050868446324751015,
+        0.0036578309235233797,
+        0.004108769956786661,
+        0.005512431135085895,
+        0.006042496629313273,
+        0.004595704113228451
+      ],
+      "R2_ohm": [
+        0.0678921720471517,
+        0.03185029487663398,
+        0.02697660949684714,
+        0.027444091702518828,
+        0.025968512284988796,
+        0.022247123717319985
+      ],
+      "ocv_correction_v": [
+        -5.8485325508204626e-05,
+        -0.004363645120866253,
+        -0.002954229589998059,
+        -0.004316788367432038,
+        -0.003510436527439213,
+        -0.0001069672739936843
+      ],
+      "R0_activation_k": 2534.1531589396823,
+      "R1_activation_k": 2506.2465493156824,
+      "R2_activation_k": 2252.281289470088,
+      "tau1_s": 3.2776335361382687,
+      "tau2_s": 54.97438132306824
+    },
+    "voltage_readout_blend": 0.0,
+    "effective_ambient_offset_c": 0.10069822027083361
+  },
+  "temperature_c": 25,
+  "primary_result": true,
+  "source_parameters": "results/week2/comparisons/calibration_refinement/25C/parameters.json",
+  "source_sha256": "b52a13a00a9952de213ef7688583f9fbc883288e5a6160e73f2c2403ca0e2e08",
+  "change": "remove unsupported readout blend; physical electrical and thermal parameters unchanged; no refit",
+  "previous_readout_blend": 0.75,
+  "ambient_nuisance": {
+    "parameter": "delta_ambient_c",
+    "sensitivity_halfwidth_c": 0.35,
+    "interpretation": "sensitivity range from feedback, not a confidence interval"
+  },
+  "model_id": "model-v1",
+  "base_ocv_file": "results/week2/parameters/ocv_25C.csv",
+  "forward_model": "src/model.py::simulate",
+  "input_current_convention": "discharge_positive_A"
+}

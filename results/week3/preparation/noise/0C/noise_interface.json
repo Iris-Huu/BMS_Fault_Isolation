@@ -1,0 +1,58 @@
+{
+  "channel_order": [
+    "current_A",
+    "voltage_V",
+    "temperature_C"
+  ],
+  "native_covariance_cadence_s": 1.0,
+  "selected_sample_interval_quantiles_s": [
+    0.9930040687322617,
+    0.9999945759773254,
+    1.006995141506195
+  ],
+  "original_samples": 62465,
+  "selected_samples": 6251,
+  "segments": [
+    0,
+    316,
+    918,
+    1514,
+    2884,
+    4321,
+    5088,
+    5691,
+    6251
+  ],
+  "bias_voltage_v": 0.0009921418767473522,
+  "bias_temperature_c": -0.33956042300227296,
+  "residual_file": "data/processed/week3_preparation/0C_cycle3_residuals.csv",
+  "residual_sha256": "e46bdec1312baaf344e5d5070a2e7b68601d21a833dadcba54ad4d3ee6751928",
+  "source_file": "data/raw/Panasonic_18650PF/0degC/Drive cycles/06-01-17_15.36 0degC_Cycle_3_Pan18650PF.mat",
+  "source_sha256": "6a37121c2ab6d7794dcb502b01e97aa1de1ca3f3ee6d0a628b56f2f96cb5de9c",
+  "frozen_parameter_sha256": "deb7a3b8cf488a23cfd09c4eb8b503af675bc8d21b398df413d593689dfd3f6a",
+  "lag_orientation": "Gamma[k,a,b]=E[e_a(t)*e_b(t+k)]; negative lags use transpose",
+  "covariance_construction": "PSD positive part of Cycle3 residual covariance minus sensor covariance; avoids counting sensor variance twice",
+  "model_discrepancy_covariance": [
+    [
+      0.0007481183713098529,
+      -0.0017045760736388526
+    ],
+    [
+      -0.0017045760736388528,
+      0.07115039062742094
+    ]
+  ],
+  "limitations": [
+    "Current variance is controller-ripple plus sensor proxy, not independently identified sensor noise.",
+    "Global residual mean is retained separately as systematic bias, not whitened away as iid noise.",
+    "Residual covariance is a stationary Cycle3 surrogate; transfer to rest and other cycles is unproven.",
+    "Samples are selected without interpolation at about 1 s; sub-second covariance is not observed.",
+    "Ambient perturbation must be treated as a nuisance separately; bias is not a measured ambient offset."
+  ],
+  "colored_channel_order": [
+    "voltage_V",
+    "temperature_C"
+  ],
+  "current_temporal_model": "independent 1-second surrogate; current sensor not separately identified",
+  "text_hash_policy": "UTF-8, no BOM, LF normalized; binary hashes exact"
+}

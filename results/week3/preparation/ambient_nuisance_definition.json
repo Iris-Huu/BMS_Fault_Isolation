@@ -1,0 +1,13 @@
+{
+  "name": "delta_ambient_c",
+  "units": "C",
+  "nominal_halfwidth_c": 0.35,
+  "halfwidth_source": "feedback sensitivity scenario, not a measured confidence interval",
+  "action": "add one unknown constant to ambient input across a window, before the frozen effective offset",
+  "requirements": [
+    "Keep this nuisance in competing-hypothesis profiling or sensitivity analysis.",
+    "Do not equate it to independent per-sample temperature noise.",
+    "Use a pre-test proxy only if its quality flags pass.",
+    "Leading-rest estimates become available only after that rest and cannot initialize earlier predictions."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "mass_g_reference": [
+    47.0,
+    48.0
+  ],
+  "mass_is_not_measured_in_this_experiment": true,
+  "manufacturer_sources": [
+    "https://api.pim.na.industrial.panasonic.com/file_stream/main/fileversion/3447",
+    "https://mediac.industry.panasonic.eu/p/2020-09/NCR18650BD-Improved_Lithium-ion_Flyer_2020-09-07_0.pdf"
+  ],
+  "heat_capacity_prior_J_K": [
+    40.0,
+    50.0
+  ],
+  "prior_source": "senior feedback; not independently measured on this test fixture",
+  "specific_heat_900_J_kgK": "illustrative equivalent-mass conversion only",
+  "identity": "P -> a P, Cth -> a Cth, hA -> a hA leaves the healthy temperature trajectory invariant; ISC heat must not be rescaled as a fitted healthy discrepancy",
+  "conclusion": "Healthy trajectories alone cannot distinguish attached heat capacity from multiplicative healthy heat-model error. Independent calorimetry/fixture data are missing."
+}
