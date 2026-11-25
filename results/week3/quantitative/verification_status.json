@@ -1,0 +1,16 @@
+{
+  "synthetic_check": {
+    "electric_KL": 9.2364896267444e-25,
+    "thermal_KL": 13.772239493474197,
+    "profiled_KL": 1.7049994725019428
+  },
+  "zero_fault_and_monotonicity": "passed",
+  "main_rows": 5472,
+  "evaluated_windows": 456,
+  "nonnegative_finite_distances": "passed",
+  "temperature_information_monotonicity": "passed",
+  "duplicate_window_check": "passed",
+  "whole_driving_windows": 111,
+  "thermal_scale_scenarios": 16,
+  "interpretation": "Week 3 prediction and figure drafts complete"
+}
